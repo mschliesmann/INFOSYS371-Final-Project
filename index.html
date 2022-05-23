@@ -1,0 +1,373 @@
+<!--URL: https://mart2-c38e7.firebaseapp.com/-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous"/>
+    <title>mART</title>
+    <link rel="shortcut icon" href="icon3.png">
+    <style>
+        #background-img {
+            background-image: url('background2.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <div class="navbar has-background-danger">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <!--Logo-->
+                <div class="navbar-item">
+                  <!-- logo -->
+                  <a href="">
+                      <i class="fas fa-2x fa-palette has-text-danger-light"></i>
+                  </a>
+                  <h1 class="ml-3 is-size-5 has-text-white has-text-weight-bold is-italic">mART</h1>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <a id="artists_tag" class="has-text-white loggedout">Artists</a>
+            </div>
+            <div class="navbar-item">
+                <a id="shop_tag" class="has-text-white">Shop</a>
+            </div>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a id="sell_tag" class="has-text-white loggedin">Sell</a>
+                </div>
+                <div class="navbar-item">
+                    <a id="signoutbtn" class="has-text-white loggedin">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Columns-->
+    <div class="section" id="background-img">
+        <div class="container">
+            <form id="submitpostingform"></form>
+        </div>
+        <div id="content" class="container">
+        </div>
+        <div id="shop" class="container">
+            <div class="columns">
+                <!-- left column -->
+                <div class="column is-2 has-background-danger p-3 ml-2" style="border-radius: 15px;">
+                    <!--search-->
+                    <p class="has-text-centered">
+                        Art Type
+                        <input type="text" id="search_box" class="p-1 m-1">
+                        <input type="button" id="search_button" value="Search"class="p-1 m-1">
+                    </p>
+                </div>
+                <!-- center column -->
+                <div class="column is-9  p-3" id="posts">
+        
+                </div>
+            </div>
+        </div>
+        <div id="exploreartists" class="container">
+            <div class="columns">
+                <!-- left column -->
+                <div class="column is-2 has-background-danger p-3 ml-2" style="border-radius: 15px;">
+                    <!--search-->
+                    <p class="has-text-centered">
+                        Artist
+                        <input type="text" id="search_box_" class="p-1 m-1">
+                        <input type="button" id="search_button_" value="Search"class="p-1 m-1">
+                    </p>
+                </div>
+                <!-- center column -->
+                <div class="column is-9  p-3" id="artists">
+        
+                </div>
+            </div>
+        </div>
+        <div id="main" class="container">
+            <!--Default columns take size 12-->
+            <div class="columns">
+                <!--Side Navigation-->
+                <div class="column is-3 has-background-danger p-5 ml-3">
+                    <div class="card">
+                        <div class="card-header-title is-centered has-background-danger-light has-text-centered">
+                            <h1 class="title is-4">Artist of the Week</h1>
+                        </div>
+                        <div class="card-content has-background-danger-light">
+                            <p class="title is-7 has-text-centered"><a href="bestcanvasstudio.html">BestCanvasStudio@gmail.com
+                            </a></p>
+                        </div>
+                        <div class="card-content pt-1 has-background-danger-light">
+                            <figure class="image is-4by5">
+                                <img src="artistoftheweek.jpeg" alt="Artist of the Week">
+                            </figure>
+                        </div>
+                        <div class="card-content p-1 has-background-danger-light">
+                            <div class="content p-2">
+                                <div class="has-text-centered is-small mb-4">
+                                    Alexander, the artist behind BestCanvasStudio created handprinted, one-of-a-kind oil paintings inspired by world renowned graffiti artist, Banksy. His style adds an eclectic, urban flare to any space. If you are looking for the perfect statement piece, Alexander can deliver.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Main Content-->
+                <div class="column p-6 has-background-danger ml-3">
+                    <h1 class="title is-1 has-text-centered has-background-white p-1" style="border-radius: 50px;">mART</h1>
+                    <div class="title is-5 has-text-centered has-text-white">
+                        <p>Make your collection bigger by shopping smaller.</p>
+                    </div>
+                    <div class="p-5 has-text-centered has-text-white">
+                        mART's purpose is to provide a centralized platform for small artists and designers to sell their creations. We serve as a marketplace for goods, as well as a network for small artists around the world.
+                    </div>
+                    <div class="p-5 has-text-centered has-text-white">
+                        Our mission is to connect art-lovers with those seeking orginal creations, and to give artists a resource to launch their career.
+                    </div>
+                </div>
+                <!--Related Content-->
+                <div class="column is-3 has-background-danger p-5 ml-3">
+                    <div class="card m-2">
+                        <div class="card-header-title is-centered has-background-danger-light">
+                            <h1 class="title is-4">Sell Art</h1>
+                        </div>
+                        <div class="card-content p-2 has-background-danger-light">
+                            <div class="content has-text-centered">
+                                <div class="has-text-centered p-2">
+                                    <p>Looking to join our artist community?</p>
+                                    <p>Create an account to sell your designs.</p>
+                                </div>
+                                <form id = "signup_form">
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <input type="email" id="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                            <input type="password" id="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="m-3 button is-white has-text-centered" id="signupbtn">Sign Up</button>
+                                        </div>
+                                    </div>
+                                    <div class="error has-text-danger" id="signup_error">
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-content p-2 has-background-danger-light">
+                            <div class="content has-text-centered">
+                                <div class="card-header-title is-centered has-background-danger-light">
+                                    <h1 class="title is-6">Already a Member?</h1>
+                                </div>
+                                <div class="has-text-centered p-1 m-1">
+                                    <p>Sign in!</p>
+                                </div>
+                                <form id = "signin_form">
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <input type="email" id="email_" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                            <input type="password" id="password_" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="m-3 button is-white has-text-centered" id="signinbtn">Sign In</button>
+                                        </div>
+                                    </div>
+                                    <div class="error has-text-danger" id="signin_error">
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                            <div class="card-header-title is-centered has-background-danger-light">
+                                <h1 class="title is-5">Connect with Us</h1>
+                            </div>
+                            <div class="card-content p-4 has-background-danger-light">
+                                <div class="content has-text-centered">
+                                    <a href="http://www.facebook.com"><i class="fab fa-2x fa-facebook-f"></i></a>
+                                    <a href="http://www.twitter.com"><i class="ml-2 fab fa-2x fa-twitter"></i></a>
+                                    <a href="http://www.instagram.com"><i class="ml-2 fab fa-2x fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div id = "main_tabs" class="section">
+            <div class="container has-background-white p-2" style="border-radius: 25px;">
+                <!-- tabs -->
+                <div class="tabs">
+                    <ul>
+                        <li class="tab3"><a>About Us</a></li>
+                        <li class="tab1"><a>Browse our Blog</a></li>
+                        <li class="tab2"><a>Reviews</a></li>
+                    </ul>
+                </div>
+                <div class ="tabp3 is-active">
+                    <div class="columns is-centered">
+                        <!-- left column -->
+                        <div class="column is-2">
+                            <img src="IMG_5377.jpg" alt="Marlena" width="200px" class="m-1">
+                        </div>
+                        <div class="column is-4 m-1">
+                            <p>
+                                Welcome to mART! Our names are Marlena Schliesmann and Lily Hoelscher, and we created mART to help solve
+                                the problem many small artists face. We have a passion for art, creativity,
+                                and design, and we hope our website can bring those with similar passions together. 
+                                Whether you're an artist or shopper, mART can suite your artistic needs. Thank you
+                                for choosing us!
+                            </p>
+                        </div>
+                        <div class="column is-2">
+                            <img src="IMG_5378.jpg" alt="Lily" width="100px" class="m-1">
+                        </div>
+                    </div>
+                </div>
+                <div class ="tabp1 is-hidden">
+                    <p class="has-text-weight-bold is-small">
+                        Have something to say? Start a conversation here to see our blog posts!
+                    </p>
+                    <div id="blog_posts">
+
+                    </div>
+                    <form id="blog_form">
+                        <div class="columns has-background-danger-light is-centered  mt-1 p-2" style="border-radius: 25px;">
+                            <div class="column is-danger m-2">
+                                <div class = "field" >
+                                    <label class = "label" > Name </label> 
+                                    <div class = "control" >
+                                        <input class = "input is-danger" type = "text" id="blog_name" placeholder = "tell us who you are!" >
+                                    </div> 
+                                </div>
+                                <div class="field">
+                                    <label class="label">Your Post</label>
+                                    <div class="control">
+                                        <textarea class="textarea is-danger" placeholder="make your contribution." id="blog_text"></textarea>
+                                    </div>
+                                </div>
+                                <div class="field is-grouped">
+                                    <div class="control">
+                                        <button id= "submit_blog" class="button is-danger mt-4">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class ="tabp2 is-hidden">
+                    <p class="has-text-weight-bold is-small">
+                        We're always looking to improve. Have any feedback? Drop it here to explore other shopper's reviews.
+                    </p>
+                    <div id="review_posts">
+
+                    </div>
+                    <form id="review_form">
+                        <div class="columns has-background-danger-light is-centered  mt-1 p-2" style="border-radius: 25px;">
+                            <div class="column is-danger m-2">
+                                <div class = "field" >
+                                    <label class = "label" > Name </label> 
+                                    <div class = "control" >
+                                    <input class = "input is-danger" type = "text" id="review_name" placeholder = "tell us who you are!" >
+                                    </div> 
+                                </div>
+                                <div class="field">
+                                    <label class="label">Add a Review</label>
+                                    <div class="control">
+                                        <textarea class="textarea is-danger" placeholder="make it nice, we're sensitive." id="review_text"></textarea>
+                                    </div>
+                                </div>
+                                <div class="field is-grouped">
+                                    <div class="control">
+                                        <button id= "submit_review" class="button is-danger mt-4">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+   
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="content has-text-centered">
+            <div>
+                Copyright &copy; 2021 mART<br>
+                <a href="email.html">contact@mart.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBa9j_tnVYM14_YldwkI7xioZ6Hh26Xgfk",
+            authDomain: "mart2-c38e7.firebaseapp.com",
+            projectId: "mart2-c38e7",
+            storageBucket: "mart2-c38e7.appspot.com",
+            messagingSenderId: "440407404571",
+            appId: "1:440407404571:web:73e334e0b1e263cf0c88be"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Define authentication variable
+        let auth = firebase.auth();
+        let db = firebase.firestore();
+
+        // Define a Storage Reference
+        let ref = firebase.storage().ref();
+
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
